@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Barlow", sans-serif !important;
+}
+
+body {
+  line-height: 1;
+}
+
+.container-background {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-background {
+  position: absolute;
+  left: -10%;
+  top: -10%;
+  width: 150%;
+  height: 150vh;
+  background: url("/img/city_lights_display.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(45px);
+  z-index: 1;
+}
+
+.center-site {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-site {
+  display: grid;
+  height: 80vh;
+  width: 1400px;
+  background: white;
+  border-radius: 10px;
+  grid-template-columns: 80px 300px 1fr;
+  overflow: hidden;
+
+  .navigation {
+    background: #0e268e; /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      #0e268e 0%,
+      #9267d3 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      #0e268e 0%,
+      #9267d3 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #0e268e 0%,
+      #9267d3 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    ul {
+      li {
+        display: block;
+        // background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .user-profile {
+    background: #002497; /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      #002497 0%,
+      #a176ec 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      #002497 0%,
+      #a176ec 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #002497 0%,
+      #a176ec 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    .name {
+      font-size: 1.3rem;
+      color: white;
+      font-weight: 400;
+      text-align: center;
+      padding: 32px 0;
+      letter-spacing: 2px;
+    }
+
+    .border-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: dashed 3px #3847ae;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    .user-img {
+      background: url("/img/image-1.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .user-position {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: white;
+      margin: 20px 0 0;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: white;
+      margin: 20px 0;
+    }
+
+    .user-skills {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+
+      .skill {
+        background: #6761c7;
+        color: white;
+        font-weight: 300;
+        font-size: 0.8rem;
+        border-radius: 4px;
+        padding: 7px 15px;
+        display: inline-block;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: #313cb2;
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  .content-area {
+    background: #f8f7fc;
+  }
+}
